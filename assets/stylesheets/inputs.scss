@@ -1,0 +1,34 @@
+.input-cont, .input {
+  width: 100%;
+}
+.input-cont {
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+%base-inputs {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  color: rgba(3,27,78,.7);
+  transition: all .25s cubic-bezier(.645,.045,.355,1);
+  border-radius: 5px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: $montserrat;
+  font-size: 100%;
+}
+
+.input {
+  @extend %base-inputs;
+  height: 48px;
+}
+.textarea {
+  @extend %base-inputs;
+  padding: 16px;
+  height: 130px;
+}

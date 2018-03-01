@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:400,700');
+@import "neat";
+
+$main-color: #0025AD;
+$dark-color: rgb(24, 38, 63);
+$light-color: rgb(121, 121, 121);
+$border-color: rgb(240, 240, 240);
+
+$colors: #ef476f, #ffd166, #06d6a0, #118ab2;
+
+$montserrat: 'Montserrat', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+$tablet: 768px;
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 00px 0 60px;
+}
+
+.container {
+   @include grid-container;
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.row {
+  @include grid-collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+  width: 100%;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.wave {
+  width: 100%;
+  height: 155px;
+  background: url("./wave.svg") no-repeat;
+}
+
+@import "typography";
+@import "buttons";
+@import "helpers";
+@import "inputs";
+@import "navbar";
+@import "index";

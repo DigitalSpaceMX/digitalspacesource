@@ -1,0 +1,28 @@
+h1, h2, h3 {
+  font-family: $montserrat;
+  letter-spacing: -0.03em;
+  color: $dark-color;
+}
+
+h2 {
+  font-size: 240%;
+}
+
+h3 {
+  font-size: 150%;
+}
+p, ol, ul, ol, {
+  font-family: $open-sans;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+}
+
+p.lead {
+  font-family: $montserrat;
+  font-size: 140%;
+  font-weight: 300;
+  color: $light-color;
+}

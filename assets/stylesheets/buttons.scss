@@ -1,0 +1,15 @@
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-family: $montserrat;
+}
+
+.btn-primary {
+  background-color: $main-color;
+  color: white;
+  font-weight: 700;
+  &:hover {
+    background-color: darken($main-color, 10%);
+  }
+}

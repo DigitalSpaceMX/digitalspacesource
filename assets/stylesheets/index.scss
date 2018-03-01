@@ -1,0 +1,158 @@
+header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: calc(100vh - 130px);
+  color: rgb(83, 48, 48);
+  text-align: center;
+  overflow: hidden;
+  background: url("./back.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+  .content {
+    @include grid-column(6);
+    text-align: left;
+    margin-top: 20vh;
+    h1 {
+      font-size: 320%;
+      font-weight: 700;
+      border-bottom: 1px solid white;
+      padding-bottom: 30px;
+      color: white;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.568);
+    }
+    p {
+      font-size: 150%;
+      color: white;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.568);
+    }
+  }
+  .form {
+    @include grid-column(4);
+    @include grid-push(2);
+    margin-top: 18vh;
+    background-color: white;
+    border-radius: 5px;
+    .form-content {
+      width: 100%;
+      padding: 10px 30px 20px;
+    }
+  }
+}
+
+.logos {
+  width: 100%;
+  margin: 30px 0 0;
+  height:60px;
+  .container {
+    display: flex;
+    align-content: baseline;
+  }
+  img {
+    display: block;
+    order: 1;
+    width: 200px;
+    margin: auto;
+  }
+  .google {
+    width: 110px;
+  }
+  .facebook {
+    width: 150px;
+  }
+  .instagram {
+    width: 140px;
+  }
+
+  .twitter {
+    width: 150px;
+  }
+
+  .javascript, .react {
+    width: 50px;
+  }
+  .github {
+    width: 100px;
+  }
+}
+
+section.services {
+  padding-top: 30px;
+}
+.service {
+  @include grid-column(4);
+  border: 1px solid #e6ede5;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(3,27,78,.06);
+  text-align: center;
+  padding: 30px 0;
+  transition: box-shadow .25s linear;
+  &:hover {
+    box-shadow: 0 2px 14px rgba(3,27,78,.08);
+  }
+  img {
+    width: 60px;
+  }
+  ul {
+    padding-left: 60px;
+    text-align: left;
+    li {
+      margin: 20px 0;
+      a {
+        font-size: 110%;
+      }
+    }
+  }
+}
+
+.customer {
+  @include grid-column(3);
+  height: 300px;
+  border: 1px solid #e6ede5;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(3,27,78,.06);
+  text-align: center;
+  padding: 30px 0;
+  transition: box-shadow .25s linear;
+  margin-bottom: 20px;
+  &:hover {
+    box-shadow: 0 2px 14px rgba(3,27,78,.08);
+  }
+  .customer_logo {
+    width: 70%;
+  }
+}
+
+.index-content {
+  position: relative;
+}
+
+#dots {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -0;
+  overflow: hidden;
+  .dots-container {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    .dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    @for $i from 1 through 100 {
+      .dot:nth-child(#{$i}) {
+        top: random(2000)+px;
+        left: random(2000)+px;
+        background: nth($colors, random(4));
+      }
+    }
+  }
+}
