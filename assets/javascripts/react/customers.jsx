@@ -27,7 +27,7 @@ class Customers extends React.Component {
 
 
   render() {
-
+    var customers;
     customers = data.map(info => <Customer key={info['id']} {...info} />);
 
     return (

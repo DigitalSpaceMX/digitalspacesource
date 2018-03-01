@@ -1,7 +1,7 @@
 ---
 title: "Development"
 slug: "aplicaciones-web-y-api"
-draft: true
+draft: false
 ---
 
 Este es la pagina de desarrollo de software.

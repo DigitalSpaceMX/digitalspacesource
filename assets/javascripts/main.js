@@ -9,8 +9,8 @@ import '../images/wave.svg';
 // GSAP
 import { TweenMax } from "gsap";
 import './animations.js';
-// React
 
-import './react/customers.jsx'
-import './react/dots.jsx'
+// React
+import './react/customers.jsx';
+import './react/dots.jsx';
 
