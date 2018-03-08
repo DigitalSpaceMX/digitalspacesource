@@ -12,11 +12,23 @@ window.addEventListener('load', function () {
 
   for (let index = 0; index < dots.length; index++) {
     const dot = dots[index];
-    posx = randomNumber(30, 80).toString() +"px ";
-    posy = randomNumber(-330, 180).toString() + "px";
+    posx = randomNumber(0, 80).toString() +"px ";
+    posy = randomNumber(-100, 180).toString() + "px";
     origin = posx + posy;
-    speed = randomNumber(30, 60);
+    speed = randomNumber(50, 100);
     TweenMax.from(dot, speed, { rotation: 360, transformOrigin: origin, repeat: -1, ease: Linear.easeNone });
   }
-})
+});
+
+
+var element = document.getElementById("navbar");
+
+window.addEventListener('scroll', function () {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset > 100) {
+    element.classList.add("navbar-scrolled");
+  } else {
+    element.classList.remove("navbar-scrolled");
+  }
+});
 

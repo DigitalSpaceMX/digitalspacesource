@@ -1,18 +1,16 @@
 {{ define "main" }}
-<section id="main">
-  <h1 id="title">{{ .Title }}</h1>
-  <div>
-    <article id="content">
-      {{ .Content }}
-    </article>
+<header class="services {{ .Params.header_class }}">
+  <div class="container">
+    <div class="text">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.header_body}}</p>
+    </div>
   </div>
-</section>
-<aside id="meta">
-  <div>
-    <section>
-      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-    </section>
-  </div>
-</aside>
+</header>
+
+<div class="container">
+  {{ .Content }}
+  <div id="dots"></div>
+</div>
+
 {{ end }}

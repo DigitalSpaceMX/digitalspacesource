@@ -1,103 +1,92 @@
 {{ define "main" }}
 <main aria-role="main">
-  <header>
+  <div id="dots"></div>
+  <header class="index">
     <div class="container">
       <div class="row">
         <div class="content">
-          <h1>Creamos Experiencias Unicas para tus Clientes</h1>
-          <p>Agencia de Marketing Digital y Desarrollo de Aplicaciones</p>
+          <p>Creamos Experiencias Unicas para tus Clientes</p>
+          <h1>Agencia de Marketing Digital y Desarrollo de Aplicaciones en Cancún</h1>
+          <a href="#" class="btn btn-primary">Solicita una cotización</a>
         </div>
-        <div class="form">
-          <div class="form-content">
-            <h3>Envíanos un mensaje!</h3>
-            <form action="/">
-              <div class="input-cont">
-                <input type="text" placeholder="Nombre" class="input">
-              </div>
-              <div class="input-cont">
-                <input type="text" placeholder="Teléfono o correo" class="input">
-              </div>
-              <div class="input-cont">
-                <textarea name="" class="textarea" placeholder="Tu mensaje"></textarea>
-              </div>
-              <button class="btn btn-primary">ENVIAR MENSAJE</button>
-            </form>
-          </div>
+        <div class="image">
+          <img src="./webpage.png" alt="webpage">
         </div>
       </div>
     </div>
   </header>
-  <div class="index-content">
-    <div id="dots"></div>
-    <div class="logos">
-      <div class="container">
-        <img src="../logos/google_logo.svg" class="google" alt="google">
-        <img src="../logos/facebook.svg" class="facebook" alt="facebook">
-        <img src="../logos/instagram.svg" class="instagram" alt="instagram">
-        <img src="../logos/twitter.svg" class="twitter" alt="twitter">
-        <img src="../logos/javascript.svg" class="javascript" alt="javascript">
-        <img src="../logos/react.svg" class="react" alt="react">
-        <img src="../logos/github.svg" class="github" alt="github">
+  <div class="logos">
+    <div class="container">
+      <img src="../logos/google_logo.svg" class="google" alt="google">
+      <img src="../logos/facebook.svg" class="facebook" alt="facebook">
+      <img src="../logos/instagram.svg" class="instagram" alt="instagram">
+      <img src="../logos/twitter.svg" class="twitter" alt="twitter">
+      <img src="../logos/javascript.svg" class="javascript" alt="javascript">
+      <img src="../logos/react.svg" class="react" alt="react">
+      <img src="../logos/github.svg" class="github" alt="github">
+    </div>
+  </div>
+  <div class="wave"></div>
+  <section class="services">
+    <div class="container">
+      <div class="heading">
+        <h2 class="text-center">Somos diseñadores, mercadólogos y programadores</h2>
+        <p class="lead text-center">Exploramos e inventamos nuevas formas de alcanzar, conectar y construir relaciones con tus clientes.</p>
+      </div>
+      <div class="row">
+        <div class="service">
+          <img src="./pencil-case.svg" alt="diseño">
+          <h3>Diseño</h3>
+          <ul>
+            <li><a href="/">Marcas y Logotipos</a></li>
+            <li><a href="/">Diseño Gráfico y Editorial </a></li>
+            <li><a href="{{ ref . "web_design.html" }}">Paginas Web</a></li>
+          </ul>
+        </div>
+        <div class="service">
+          <img src="./rgb.svg" alt="diseño">
+          <h3>Marketing Digital</h3>
+          <ul>
+            <li><a href="/">Estrategia de Contenido</a></li>
+            <li><a href="/">Redes Sociales</a></li>
+            <li><a href="/">Motores de Busqueda (SEO)</a></li>
+          </ul>
+        </div>
+        <div class="service">
+          <img src="./3d.svg" alt="diseño">
+          <h3>Software</h3>
+          <ul>
+            <li><a href="{{ ref . "development.md" }}">Aplicaciones Web y API</a></li>
+            <li><a href="/">Aplicaciones para Celulares</a></li>
+            <li><a href="/">Sistemas Personalizados</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <section class="services">
-      <div class="container">
-        <div class="heading">
-          <h2 class="text-center">Somos diseñadores, mercadólogos y programadores</h2>
-          <p class="lead text-center">Exploramos e inventamos nuevas formas de alcanzar, conectar y construir relaciones con tus clientes.</p>
-        </div>
-        <div class="row">
-          <div class="service">
-            <img src="./pencil-case.svg" alt="diseño">
-            <h3>Diseño</h3>
-            <ul>
-              <li><a href="/">Marcas y Logotipos</a></li>
-              <li><a href="/">Diseño Gráfico y Editorial </a></li>
-              <li><a href="/">Paginas Web</a></li>
-            </ul>
-          </div>
-          <div class="service">
-            <img src="./rgb.svg" alt="diseño">
-            <h3>Marketing Digital</h3>
-            <ul>
-              <li><a href="/">Estrategia de Contenido</a></li>
-              <li><a href="/">Redes Sociales</a></li>
-              <li><a href="/">Motores de Busqueda (SEO)</a></li>
-            </ul>
-          </div>
-          <div class="service">
-            <img src="./3d.svg" alt="diseño">
-            <h3>Software</h3>
-            <ul>
-              <li><a href="{{ ref . "development.md" }}">Aplicaciones Web y API</a></li>
-              <li><a href="/">Aplicaciones para Celulares</a></li>
-              <li><a href="/">Sistemas Personalizados</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+  </section>
 
-    
-    <section class="customers">
-      <div class="heading">
-        <h2 class="text-center">Nuestros clientes</h2>
-        <p class="lead text-center">Conoce las diferentes historia de éxito</p>
-      </div>
-      <div class="container">
-        <div class="row" id="customers">
-        
-        </div>
-      </div>
-    </section>
+  <section class="parallax bg-dark philosophy">
+    <p>Queremos ser parte de tu historia de éxito</p>
+  </section>
+
+  <section class="customers">
+    <div class="heading">
+      <h2 class="text-center">Algunos de Nuestros Clientes</h2>
+      <p class="lead text-center">Conoce las diferentes historias de éxito</p>
+    </div>
+    <div class="container">
+      <div class="row" id="customers">
       
-    <div class="wave"></div>
-    
-    <section>
-      <div class="heading">
-        <h2 class="text-center">Ahora queremos ser parte de tu historia de éxito</h2>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+  
+  
+  <section class="parallax contact">
+    <h2>Háblanos de tu Proyecto</h2>
+    <div class="container">
+      
+    </div>
+  </section>
 </main>
 {{ end }}

@@ -15,9 +15,9 @@ class Customers extends React.Component {
 
   componentDidUpdate(){
     if(this.state.visible == true){
-      TweenMax.staggerTo(".customer", 2, { scale: 1, opacity: 1, delay: 0.5, ease: Elastic.easeOut, force3D: true }, 0.2);
+      TweenMax.staggerTo(".customer", 2, { scale: 1, opacity: 1, delay: 0.5, ease: Elastic.easeOut.config(1, 0.5), force3D: true }, 0.2);
     } else {
-      TweenMax.set(".customer", {scale: 0.9, opacity: 0});
+      TweenMax.set(".customer", {scale: 0.7, opacity: 0});
     }
   }
 

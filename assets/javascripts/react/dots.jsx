@@ -9,7 +9,7 @@ class Dots extends React.Component {
 
   render() {
     var dots = [];
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 50; i++) {
       dots.push(<Dot key={i} />);
     }
     return <div className="dots-container">{dots}</div>;

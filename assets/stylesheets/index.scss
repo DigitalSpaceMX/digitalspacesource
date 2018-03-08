@@ -1,42 +1,39 @@
-header {
+header.index {
   position: relative;
   z-index: 10;
   width: 100%;
   height: calc(100vh - 130px);
-  color: rgb(83, 48, 48);
   text-align: center;
   overflow: hidden;
   background: url("./back.jpg") no-repeat;
   background-size: cover;
   background-position: 0% 100%;
   .content {
-    @include grid-column(6);
+    @include grid-column(5);
     text-align: left;
     margin-top: 20vh;
-    h1 {
-      font-size: 320%;
-      font-weight: 700;
-      border-bottom: 1px solid white;
-      padding-bottom: 30px;
-      color: white;
-      text-shadow: 1px 1px rgba(0, 0, 0, 0.568);
-    }
     p {
-      font-size: 150%;
-      color: white;
-      text-shadow: 1px 1px rgba(0, 0, 0, 0.568);
+      letter-spacing: -0.02em;
+      font-size: 270%;
+      font-weight: 700;
+      font-family: $montserrat;
+    }
+    h1 {
+      font-size: 140%;
+      margin-bottom: 60px;
+      font-family: $open-sans;
+      font-weight: 200;
+    }
+    .btn {
+      padding: 15px 25px;
     }
   }
-  .form {
-    @include grid-column(4);
-    @include grid-push(2);
-    margin-top: 18vh;
-    background-color: white;
-    border-radius: 5px;
-    .form-content {
-      width: 100%;
-      padding: 10px 30px 20px;
-    }
+  .image {
+    @include grid-column(7);
+    padding-top: 22vh;
+   img {
+     width: 100%;
+   }
   }
 }
 
@@ -77,6 +74,45 @@ header {
   }
 }
 
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  z-index: 100;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 160px;
+  -webkit-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:    inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow:         inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+  p {
+    position: relative;
+    z-index: 100;
+    font-size: 200%;
+    font-family: $montserrat;
+  }
+}
+
+.bg-dark {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.34)
+  }
+}
+
+.philosophy {
+  background-image: url("./philo.jpeg");
+}
+
 section.services {
   padding-top: 30px;
 }
@@ -109,36 +145,36 @@ section.services {
 
 .customer {
   @include grid-column(3);
-  height: 300px;
+  display: flex;
+  height: 250px;
   border: 1px solid #e6ede5;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(3,27,78,.06);
   text-align: center;
-  padding: 30px 0;
   transition: box-shadow .25s linear;
   margin-bottom: 20px;
+  overflow: hidden;
   &:hover {
     box-shadow: 0 2px 14px rgba(3,27,78,.08);
   }
   .customer_logo {
-    width: 70%;
+    object-fit: cover;
   }
 }
 
-.index-content {
-  position: relative;
-}
-
+$zindex: -10, 100;
 #dots {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: -0;
   overflow: hidden;
   .dots-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow:hidden;
@@ -148,12 +184,42 @@ section.services {
       height: 10px;
       border-radius: 50%;
     }
-    @for $i from 1 through 100 {
+    @for $i from 1 through 50 {
       .dot:nth-child(#{$i}) {
-        top: random(2000)+px;
-        left: random(2000)+px;
+        position: absolute;
+        top: random(800)+px;
+        left: random(1800)+px;
         background: nth($colors, random(4));
+        z-index: nth($zindex, random(2));
       }
+    }
+  }
+}
+
+.contact {
+  background: rgb(15, 26, 48);
+  padding: 60px 0;
+  height: auto;
+  h2, p {
+    color: white;
+  }
+  .container {
+    display: flex;
+    align-content: center;
+    height: auto;
+    .coffee {
+      padding-top: 50px;
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+    .form {
+      img {
+        margin-top: -50px;
+        width: 100%;
+      }
+      width: 60%;
     }
   }
 }

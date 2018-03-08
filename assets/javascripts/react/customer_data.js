@@ -1,40 +1,41 @@
 const data = [
   { id: 1, 
-    name: "GLOSS Nail Bar",
-    logo: "../clients/gloss-logo.png",
+    name: "Waffle Boutique", 
+    logo: "../clients/waffle.jpg", 
   },
   { id: 2, 
-    name: "Waffle Boutique", 
-    logo: "../clients/bwb-logo.png", 
-  },
-  { id: 3, 
     name: "La Parrilla", 
-    logo: "../clients/parrilla-logo.png", 
+    logo: "../clients/laparrilla.jpg", 
+  },
+  {
+    id: 3,
+    name: "GLOSS Nail Bar",
+    logo: "../clients/gloss.jpg",
   },
   {
     id: 4,
-    name: "GLOSS Nail Bar",
-    logo: "../clients/gloss-logo.png",
+    name: "ILS",
+    logo: "../clients/inlese.jpg",
   },
   {
     id: 5,
-    name: "Waffle Boutique",
-    logo: "../clients/bwb-logo.png",
+    name: "Sertec",
+    logo: "../clients/sertec.jpg",
   },
   {
     id: 6,
-    name: "La Parrilla",
-    logo: "../clients/parrilla-logo.png",
+    name: "ArtauWatch",
+    logo: "../clients/artauwatch.jpg",
   },
   {
     id: 7,
-    name: "Waffle Boutique",
-    logo: "../clients/bwb-logo.png",
+    name: "Gelish",
+    logo: "../clients/gelish.jpg",
   },
   {
     id: 8,
-    name: "La Parrilla",
-    logo: "../clients/parrilla-logo.png",
+    name: "Zendoctor",
+    logo: "../clients/zendoctor.jpg",
   }
 ]
 
