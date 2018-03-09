@@ -39,6 +39,15 @@ header {
   background-position: 0% 100%;
 }
 
+hr.dash {
+  background-color: #e5e8ed;
+  border: 0;
+  display: block;
+  height: 4px;
+  margin: 0 auto;
+  width: 60px;
+}
+
 .container {
    @include grid-container;
    position: relative;
@@ -50,7 +59,7 @@ header {
 .row {
   @include grid-collapse;
   width: 100%;
-  margin: 0 auto;
+  clear: both;
 }
 
 .heading {
@@ -61,7 +70,8 @@ header {
 
 .wave {
   width: 100%;
-  height: 155px;
+  height: 150px;
+  margin: -50px 0;
   background: url("./wave.svg") no-repeat;
 }
 
@@ -71,4 +81,3 @@ header {
 @import "inputs";
 @import "navbar";
 @import "index";
-@import "services";

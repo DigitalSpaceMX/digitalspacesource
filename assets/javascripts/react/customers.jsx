@@ -39,5 +39,8 @@ class Customers extends React.Component {
   }
 };
 
-render(<Customers />, document.getElementById('customers'))
+var elementExists = document.getElementById("customers");
+if(elementExists != null) {
+  render(<Customers />, elementExists)
+}
 

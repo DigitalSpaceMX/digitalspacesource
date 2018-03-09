@@ -16,4 +16,7 @@ class Dots extends React.Component {
   }
 };
 
-render(<Dots />, document.getElementById('dots'))
+var elementExists = document.getElementById("dots");
+if (elementExists != null) {
+  render(<Dots />, elementExists)
+}

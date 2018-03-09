@@ -24,7 +24,6 @@ window.addEventListener('load', function () {
 var element = document.getElementById("navbar");
 
 window.addEventListener('scroll', function () {
-  console.log(window.pageYOffset);
   if (window.pageYOffset > 100) {
     element.classList.add("navbar-scrolled");
   } else {

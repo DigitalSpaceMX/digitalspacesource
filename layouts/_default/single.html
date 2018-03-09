@@ -1,16 +1,5 @@
 {{ define "main" }}
-<header class="services {{ .Params.header_class }}">
-  <div class="container">
-    <div class="text">
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Params.header_body}}</p>
-    </div>
-  </div>
-</header>
 
-<div class="container">
   {{ .Content }}
-  <div id="dots"></div>
-</div>
 
 {{ end }}

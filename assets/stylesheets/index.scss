@@ -3,11 +3,6 @@ header.index {
   z-index: 10;
   width: 100%;
   height: calc(100vh - 130px);
-  text-align: center;
-  overflow: hidden;
-  background: url("./back.jpg") no-repeat;
-  background-size: cover;
-  background-position: 0% 100%;
   .content {
     @include grid-column(5);
     text-align: left;
@@ -40,7 +35,7 @@ header.index {
 .logos {
   width: 100%;
   margin: 30px 0 0;
-  height:60px;
+  height:80px;
   .container {
     display: flex;
     align-content: baseline;
@@ -172,23 +167,19 @@ $zindex: -10, 100;
   position: absolute;
   overflow: hidden;
   .dots-container {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    overflow:hidden;
     .dot {
       position: absolute;
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
     }
     @for $i from 1 through 50 {
       .dot:nth-child(#{$i}) {
         position: absolute;
         top: random(800)+px;
-        left: random(1800)+px;
+        left: random(1600)+px;
         background: nth($colors, random(4));
         z-index: nth($zindex, random(2));
       }
@@ -196,30 +187,60 @@ $zindex: -10, 100;
   }
 }
 
-.contact {
-  background: rgb(15, 26, 48);
-  padding: 60px 0;
-  height: auto;
-  h2, p {
-    color: white;
+.benefit {
+  @include grid-column(4);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid $border-color;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(3,27,78,.06);
+  transition: box-shadow .25s linear;
+  &:hover {
+    box-shadow: 0 2px 14px rgba(3,27,78,.08);
   }
-  .container {
-    display: flex;
-    align-content: center;
-    height: auto;
-    .coffee {
-      padding-top: 50px;
-      width: 40%;
+  img {
+    width: 100%;
+  }
+  .benefit-text {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.how-we-do-it {
+  .row {
+    margin: 60px 0;
+    div {
+      @include grid-column(6);
+      margin-bottom: 60px;
       img {
         width: 100%;
+        box-shadow: 0 2px 4px rgba(3,27,78,.06);
+        transition: box-shadow .25s linear;
+        border-radius: 0px 50px 0px 50px;
+        &:hover {
+          box-shadow: 0 2px 14px rgba(3,27,78,.08);
+        }
       }
     }
-    .form {
+    .description {
+      padding-top: 40px;
+    }
+  }
+}
+
+.why-us {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding-top: 60px;
+  .row {
+    div {
+      @include grid-column(4);
+      margin-bottom: 60px;
+      text-align: center;
       img {
-        margin-top: -50px;
-        width: 100%;
+        width: 70px;
       }
-      width: 60%;
     }
   }
 }

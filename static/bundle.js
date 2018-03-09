@@ -9103,7 +9103,10 @@ var Customers = function (_React$Component) {
 
 ;
 
-(0, _reactDom.render)(_react2.default.createElement(Customers, null), document.getElementById('customers'));
+var elementExists = document.getElementById("customers");
+if (elementExists != null) {
+  (0, _reactDom.render)(_react2.default.createElement(Customers, null), elementExists);
+}
 
 /***/ }),
 /* 20 */
@@ -28520,7 +28523,10 @@ var Dots = function (_React$Component) {
 
 ;
 
-(0, _reactDom.render)(_react2.default.createElement(Dots, null), document.getElementById('dots'));
+var elementExists = document.getElementById("dots");
+if (elementExists != null) {
+  (0, _reactDom.render)(_react2.default.createElement(Dots, null), elementExists);
+}
 
 /***/ }),
 /* 41 */
@@ -28602,7 +28608,6 @@ window.addEventListener('load', function () {
 var element = document.getElementById("navbar");
 
 window.addEventListener('scroll', function () {
-  console.log(window.pageYOffset);
   if (window.pageYOffset > 100) {
     element.classList.add("navbar-scrolled");
   } else {
